@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Polideportivo",
+    "description": "Consiste en una interfaz gráfica hecha con javafx que permite interactuar con las reservas de un polideportivo."
+  },
+  {
+    "title": "GalleryModel",
+    "description": "Aplicación android para subir y ver obras de arte."
+  },
+  {
+    "title": "NotesApp",
+    "description": "Aplicación web hecha con django para crear, manipular y clasificar notas."
+  }
+]

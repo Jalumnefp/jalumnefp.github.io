@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Lenguajes",
+        "content": [
+            "/images/java-icon.png",
+            "/images/python-icon.png",
+            "/images/kotlin-icon.png",
+            "/images/sql-icon.png"
+        ]
+    },
+    {
+        "title": "Frameworks",
+        "content": [
+            "/images/javafx-icon.png",
+            "/images/androidsdk-icon.png",
+            "/images/django-icon.png"
+        ]
+    }
+]

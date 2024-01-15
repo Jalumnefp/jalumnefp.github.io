@@ -1,0 +1,10 @@
+---
+const { title } = Astro.props
+---
+
+<section id={title.toLowerCase()} class="pb-1">
+    <article class="my-10 sm:mx-28 text-center">
+        <h1 class="text-3xl font-bold border-b border-black dark:border-white mx-8 mb-8 pb-5">{title}</h1>
+        <slot/>
+    </article>
+</section>

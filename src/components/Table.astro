@@ -1,0 +1,10 @@
+---
+import Row from "./Row.astro";
+const { content } = Astro.props;
+---
+
+<div class="flex flex-wrap justify-center mx-5">
+    {content.map((row: undefined[]) => <Row title={row.title} content={row.content} /> )}
+</div>
+
+

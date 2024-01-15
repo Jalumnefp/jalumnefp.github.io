@@ -1,0 +1,17 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="../scripts/main.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="flex-wrap bg-cyan-50 text-cyan-950 dark:bg-slate-800 dark:text-white hidden">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+const { content, repoUrl } = Astro.props
+---
+
+<div class="container flex flex-wrap justify-center mt-6">
+    {content.map((project: { title: string; description: string; }) => {
+        return (
+            <div class="border-double border-4 bg-cyan-100 border-cyan-500 dark:bg-slate-800 dark:border-cyan-700 rounded-2xl w-96 mx-5 my-4 px-10 py-4">
+                <h1 class="mb-4 text-2xl font-bold">{project.title}</h1>
+                <p>{project.description}</p>
+                <div class=" mt-4">
+                    <a href={repoUrl + '/' + project.title} class="bg-cyan-300 dark:bg-cyan-400 text-sm px-3 py-1 font-bold rounded-lg">Ver repositorio</a>
+                </div>
+            </div>
+        )
+    })}
+</div>

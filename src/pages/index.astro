@@ -1,0 +1,39 @@
+---
+import { getEntry } from 'astro:content'
+
+import Base from '../layouts/BaseLayout.astro'
+import Navbar from '../components/Navbar.astro'
+import Header from '../components/Header.astro'
+import Projects from '../components/ProjectsContainer.astro'
+import Table from '../components/Table.astro'
+import Section from '../layouts/Section.astro'
+
+const main_data = await getEntry('index', 'main')
+const technologys = await getEntry('technologys', 'technologys')
+const projects = await getEntry('projects', 'projects')
+
+const pageTitle = main_data.data.title
+const myFullName = main_data.data.author
+const myFullFace = main_data.data.image
+const sections = main_data.data.sections
+const repoUrl = main_data.data.repository_url
+const table_content = technologys.data
+const about_me = 'A veces programo cosas.'
+---
+
+<Base pageTitle={pageTitle}>
+	<Navbar title="Hello world!" repo_url={repoUrl} sections={sections} />
+	<main>
+		<Header myFullName={myFullName} myFullFace={myFullFace} />
+		<Section title={sections[0]}>
+			<Table content={table_content} />
+		</Section>
+		<Section title={sections[1]}>
+			<Projects content={projects.data} repoUrl={repoUrl} />
+		</Section>
+		<Section title={sections[2]}>
+			<p>{about_me}</p>
+		</Section>
+	</main>
+	<footer class="flex flex-wrap bg-cyan-500 dark:bg-slate-900 mt-10 py-10" />
+</Base>

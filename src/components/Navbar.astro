@@ -1,0 +1,53 @@
+---
+import moon_icon from '../images/icons/moon-solid.svg'
+import sun_icon from '../images/icons/sun-solid.svg'
+
+const { title, repo_url, sections } = Astro.props
+---
+<nav class="flex flex-wrap bg-cyan-500 dark:bg-slate-900">
+    <!-- NAVBAR TITLE -->
+    <div class="flex-none sm:px-5">
+        <h1 class="text-2xl font-bold font-mono py-5">{title}</h1>
+    </div>
+    <!-- NAVBAR MAIN -->
+    <div class="grow text-center flex flex-wrap justify-center max-md:hidden">
+        {sections.map((it: string) => (
+            <a class="py-5 px-8 hover:bg-cyan-600 hover:border-b-4 font-bold border-cyan-950 dark:hover:bg-slate-800 dark:border-white"
+            href={'#'+it.toLowerCase()}>
+            {it}</a>
+        ))}
+    </div>
+    <!-- NAVBAR UTILS -->
+    <div class="flex-none sm:px-10">
+
+        <img id='dark-icon' 
+        class="my-5 size-8 hidden"
+        src={moon_icon.src} 
+        alt='dark-icon'>
+
+        <img id="light-icon"
+        class="my-5 size-8 hidden"
+        src={sun_icon.src}
+        alt="light-icon">
+
+    </div>
+    
+</nav>
+
+<script>
+    const dark_icon = document.querySelector('#dark-icon')
+    const light_icon = document.querySelector('#light-icon')
+    const mode_icons = [dark_icon, light_icon]
+
+    function toggleMode() {
+        document.querySelector('html').classList.toggle('dark')
+        dark_icon.classList.toggle('hidden')
+        light_icon.classList.toggle('hidden')
+    }
+
+    mode_icons.forEach((icon: Element) => {
+        icon.addEventListener('click', toggleMode)
+        icon.addEventListener('mouseover', () => icon.style.cursor='pointer')
+    })
+    
+</script>
