@@ -16,20 +16,19 @@ const pageTitle = main_data.data.title
 const myFullName = main_data.data.author
 const myFullFace = main_data.data.image
 const sections = main_data.data.sections
-const repoUrl = main_data.data.repository_url
 const table_content = technologys.data
 const about_me = 'A veces programo cosas.'
 ---
 
 <Base pageTitle={pageTitle}>
-	<Navbar title="Hello world!" repo_url={repoUrl} sections={sections} />
+	<Navbar title="Hello world!" sections={sections} />
 	<main>
 		<Header myFullName={myFullName} myFullFace={myFullFace} />
 		<Section title={sections[0]}>
 			<Table content={table_content} />
 		</Section>
 		<Section title={sections[1]}>
-			<Projects content={projects.data} repoUrl={repoUrl} />
+			<Projects content={projects.data} />
 		</Section>
 		<Section title={sections[2]}>
 			<p>{about_me}</p>

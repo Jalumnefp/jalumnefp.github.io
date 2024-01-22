@@ -7,7 +7,6 @@ const indexCollection = defineCollection({
     author: z.string(),
     image: image(),
     sections: z.array(z.string()),
-    repository_url: z.string()
   })
 })
 
@@ -23,11 +22,14 @@ const technologysCollection = defineCollection({
 
 const projectsCollection = defineCollection({
   type: 'data',
-  schema: z.array(
-    z.object({
-      title: z.string(),
-      description: z.string()
-    }))
+  schema: z.object({
+    repository_url: z.string(),
+    projects: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string()
+      }))
+  })
 })
 
 export const collections = {

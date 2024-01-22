@@ -3,8 +3,8 @@ import { Image } from "astro:assets"
 const { myFullName, myFullFace } = Astro.props
 ---
 
-<header id="header" class="container flex flex-wrap my-20 justify-center">
-    <div class="mx-10 hover:animate-spin">
+<header id="header" class="flex flex-wrap my-20 justify-center">
+    <div class="max-sm:mb-10 sm:ms-5 hover:animate-spin">
         <Image class="rounded-full size-40" src={myFullFace} alt="My-face" />
     </div>
     <div class="mx-10 text-center my-auto">

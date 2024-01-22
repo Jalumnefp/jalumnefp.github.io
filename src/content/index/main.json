@@ -2,6 +2,5 @@
   "title": "Portafoliardo",
   "author": "Jaume Ferrà Pérez",
   "image": "/images/lancer.png",
-  "sections": ["Tecnologías", "Proyectos", "Acerca de"],
-  "repository_url": "https://github.com/Jalumnefp"
+  "sections": ["Tecnologías", "Proyectos", "Acerca de"]
 }
