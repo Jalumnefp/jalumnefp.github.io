@@ -7,11 +7,11 @@
     },
     {
       "title": "GalleryModel",
-      "description": "Aplicación android para subir y ver obras de arte."
+      "description": "Aplicación android para ver obras de arte online o offline. También contiene un chat."
     },
     {
       "title": "NotesApp",
-      "description": "Aplicación web hecha con django para crear, manipular y clasificar notas."
+      "description": "Aplicación web hecha con django y bootstrap para crear, manipular y clasificar notas."
     }
   ]
 }
