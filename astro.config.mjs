@@ -7,6 +7,6 @@ export default defineConfig({
   root: 'src',
   publicDir: 'public',
   integrations: [tailwind()],
-  site: 'https://Jalumnefp.github.io',
+  site: 'https://jaum3fp.github.io',
   //base: '/Jalumnefp.github.io'
 });
